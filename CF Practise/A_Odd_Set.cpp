@@ -14,14 +14,13 @@ int main() {
     string winner;
 
     map <string, int> :: iterator it;
+    // declaring iterator to a map
     int maxGoals = 0;
     for (it=goalCount.begin(); it != goalCount.end(); it++) {
         if(it->second >maxGoals){
             maxGoals = it->second; winner = it->first;
         }
         }
-
-
     cout << winner << endl;
     return 0;
     }
