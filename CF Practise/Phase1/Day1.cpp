@@ -6,29 +6,21 @@
 #define yes cout << "YES" << endl
 #define no cout << "NO" << endl
 #define ll long long
+#define elif else if
 using namespace std;
 
 int main()
 {
     FAST_IO;
 
-    double n;
-    cin >> n;
-
-    int prev = floor(n);
-    int next = ceil(n);
-
-    double diff1 = abs(n - prev);
-    double diff2 = abs(n - next);
-
-    if (diff1 < diff2)
-        cout << prev << endl;
-    else if (diff2 < diff1)
-        cout << next << endl;
-    else if (diff1 == diff2)
-        cout << next << endl;
-    else
-        cout << 0 << endl;
-
+    int a, b, t;
+    cin >> a >> b >> t;
+    int ans = 0;
+    while (t >= a)
+    {
+        ans += b;
+        t -= a;
+    }
+    cout << ans;
     return 0;
 }
